@@ -1,0 +1,14 @@
+<html xmlns:th="https://www.thymeleaf.org">
+<body>
+
+<a href="upload">Upload</a>
+<a href="removeImage">Remove image</a>
+
+<h2 th:text="${username}"/>
+
+<img height="600" width="600" alt="sample" th:src="*{'data:image/png;base64,'+image}" />
+
+<!--<img class="info" th:attr="src=@{${image}}" />-->
+
+</body>
+</html>
