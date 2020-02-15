@@ -1,0 +1,18 @@
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+
+<tr th:each="comment: ${comments}">
+    ID:
+    <td th:text="${comment.id}"/>
+    Name:
+    <td th:text="${comment.name}"/>
+    <br>
+</tr>
+
+<h3><a href="add">Add</a></h3>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+<html xmlns:th="https://www.thymeleaf.org">
+<body>
+
+<form action="#" th:action="@{/add}" th:object="${comment}" method="post">
+    <input type="text" hidden th:text="*{id}"/>
+    <p>Name: <input type="text" th:field="*{name}"/></p>
+    <p><input type="submit" value="Submit"/> <input type="reset" value="Reset"/></p>
+</form>
+
+</body>
+</html>
