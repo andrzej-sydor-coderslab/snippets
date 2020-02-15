@@ -1,0 +1,30 @@
+<html xmlns:th="https://www.thymeleaf.org">
+<body>
+ID:
+<td th:text="${author.id}"/>
+<br>
+Name:
+<td th:text="${author.name}"/>
+<br>
+
+<table>
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:if="${author.books.empty}">
+        <td colspan="2"> No Books Available</td>
+    </tr>
+    <tr th:each="book : ${author.books}">
+        <td><span th:text="${book.name}"> Title </span></td>
+    </tr>
+    </tbody>
+</table>
+
+<a href="/addBooks">Add books</a>
+
+</body>
+</html>
